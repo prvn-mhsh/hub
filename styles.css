@@ -1,0 +1,154 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling for the navbar */
+  .navbar {
+    background-color: #333; /* Dark background color */
+  }
+  
+  .container {
+    max-width: 1200px; /* Adjust this value according to your design */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to the sides */
+    display: flex; /* Make the container a flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out items horizontally */
+  }
+  
+  .navbar-brand {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Font size */
+  }
+  
+  .menu {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Make the menu items horizontal */
+  }
+  
+  .menu li {
+    margin-right: 20px; /* Spacing between menu items */
+  }
+  
+  .menu li:last-child {
+    margin-right: 0; /* Remove margin from the last menu item */
+  }
+  
+  .menu li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  .center-text {
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    bottom: 40%;
+    text-align: center;
+    
+    font-style: arial sans-serif;
+      font-size: 24px; /* Font size */
+      color: black; /* Text color */
+  }
+  .center-text h1 {
+    font-style: arial sans-serif;
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+  .center-text h2 {
+    padding: auto; /* Font size */
+    color: blue; /* Text color */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent wrapping */
+  animation: eraseAndForm 4s infinite; /* Animation */
+  }
+  .center-text p {
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+     
+  }
+  .center-text p em{
+    color:blue;
+  }
+  .txt-rotate > .wrap {
+    border-right: 0.15em solid #333;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(-360deg); }
+  }
+  
+  .txt-rotate {
+    display: inline-block;
+  }
+  /* Assign background images using CSS */
+#button1 {
+  background-image: url('https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png');
+}
+
+#button2 {
+  background-image: url('https://cdn.icon-icons.com/icons2/2992/PNG/512/linkedin_logo_icon_187302.png');
+}
+
+#button3 {
+  background-image: url('https://logowik.com/content/uploads/images/gmail-new-icon5198.jpg');
+}
+
+/* Flex button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+/* Flex buttons */
+.flex-button {
+  margin: 0 10px; /* Adjust spacing between buttons */
+    padding: 0; /* Remove padding */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Round shape */
+    cursor: pointer;
+    overflow: hidden; /* Hide overflow */
+    width: 75px; /* Adjust button width */
+    height: 75px; /* Adjust button height */
+    background-size: cover; /* Ensure full image fits inside the button */
+    background-position: center; /* Center the background image */
+}
+
+/* Optional: add hover effect */
+.flex-button:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+/* Rectangular download button */
+.download-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px; /* Adjust button padding */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Hover animation */
+.download-button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+  transform: translateY(-2px); /* Move button up on hover */
+}
+
+/* Optional: Add shadow */
+.download-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+} 
+
