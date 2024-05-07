@@ -50,4 +50,10 @@ var TxtRotate = function(el, toRotate, period) {
       }
     }
   };
-  
+  // Toggle between light and dark themes
+document.getElementById('theme-toggle').addEventListener('change', function() {
+  document.body.classList.toggle('dark-theme');
+});
+
+
+
