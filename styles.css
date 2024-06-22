@@ -4,6 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url('Background.gif');
+  background-size: cover; /* This makes sure the image covers the whole background */
+  background-repeat: repeat;
+  background-attachment: fixed; /* This makes the background fixed on scroll */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 /* Basic styling for the navbar */
 
@@ -52,6 +60,7 @@
     top: 30%;
     bottom: 40%;
     text-align: center;
+    color: aliceblue;
     font-style: Arial, sans-serif; /* Correct font-family declaration */
     font-size: 24px;
 }
@@ -159,87 +168,4 @@ animation: jump 2s; /* Apply animation with 2 seconds duration and infinite loop
 }
 .body {
 color: #333; /* Default text color for light theme */
-}
-
-.dark-theme {
-background-color: #333;
-color: #fff; /* Text color for dark theme */
-}
-
-/* Styles for light theme */
-.light-theme {
-background-color: #fff;
-color: #333; /* Text color for light theme */
-}
-
-/* Styles for the theme switch container */
-.theme-switch {
-position: relative;
-margin-left: 20px;
-display: inline-block;
-width: 60px;
-height: 34px;
-}
-
-/* Hide default checkbox */
-.theme-switch input {
-opacity: 0;
-width: 0;
-height: 0;
-}
-
-/* Styles for the slider */
-.slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
-transition: .4s;
-border-radius: 34px;
-}
-
-/* Styles for the slider's round shape */
-.slider.round {
-border-radius: 34px;
-}
-
-/* Styles for the slider's checked state */
-.theme-switch input:checked + .slider {
-background-color: #2196F3;
-}
-
-/* Styles for the slider's sliding action */
-.slider.round:before {
-position: absolute;
-content: "";
-height: 26px;
-width: 26px;
-left: 4px;
-bottom: 4px;
-background-color: white;
-transition: .4s;
-border-radius: 50%;
-}
-
-/* Styles for the slider's checked state */
-.theme-switch input:checked + .slider:before {
-transform: translateX(26px);
-}
-.theme-switch .icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2em;
-  color: #fff; /* Icon color */
-}
-
-.theme-switch .icon.sun {
-  left: 10px;
-}
-
-.theme-switch .icon.moon {
-  right: 10px;
 }
