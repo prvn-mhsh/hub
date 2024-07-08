@@ -1,41 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-WNbKK/xjQ6fLzWWM/tnndG+Q6Oq05J+2/5oRvKT2QCZMyhJc8LAyHJZojbmLXJeC/5IwuIYZUIr9M7zauH5D8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-WNbKK/xjQ6FzWWM/tnndG+Q6Oq05J+2/5oRvKT2QCZMyhJc8LAyHJZojbmLXJeC/5IwuIYZUIr9M7zauH5D8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Praveen Hub</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
   <nav class="navbar">
     <div class="container">
       <a href="#" class="navbar-brand">Praveen Hub</a>
-      
       <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#commingsoon">About</a></li>
-      </ul>
+        <ul class="menu">
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">Skills</a></li>
+          <li><a href="#section3">Projects</a></li>
+        </ul>
+      </div>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"></button>
     </div>
-    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"></button>
-      
   </nav>
+  
+  <div class="section" id="section1">
     <div class="center-text">
       <p class="animated-text">Welcome guys! I'm</p>
-				<h1>Praveen</h1>
-        <h2>I'm a <span class="txt-rotate" data-period="1000" data-rotate='["Student", "Developer"]'><span class="wrap">Student</span></span></h2>
-        <p>I'm someone who immerses themselves in the world of <em>programming</em> and <em>development</em>,constantly exploring new tech stacks.It's not just a hobby; it's my burning passion.</p>
+      <h1>Praveen</h1>
+      <h2>I'm a <span class="txt-rotate" data-period="1000" data-rotate='["Full-Stack Developer", "Web Developer"]'><span class="wrap">Student</span></span></h2>
+      <p>I'm someone who immerses themselves in the world of <em>programming</em> and <em>development</em>, constantly exploring new tech stacks. It's not just a hobby; it's my burning passion.</p>
       
-        <div class="button-container">
-          <a href="https://github.com/prvn-mhsh" target="_blank"class="flex-button" id="button1"></button>
-          <a href="https://www.linkedin.com/in/prvnmhsh/" target="_blank"class="flex-button" id="button2"></button>
-          <a href="mailto:praveenmahesh06@gmail.com" target="_blank"class="flex-button" id="button3"></button>
+      <div class="button-container">
+        <a href="https://github.com/prvn-mhsh" target="_blank" class="flex-button" id="button1"></a>
+        <a href="https://www.linkedin.com/in/prvnmhsh/" target="_blank" class="flex-button" id="button2"></a>
+        <a href="mailto:praveenmahesh06@gmail.com" target="_blank" class="flex-button" id="button3"></a>
       </div>
       <a href="Praveen-FullStack.pdf" class="download-button" download>Download CV</a>
-        <script src="styles.js"></script>
-      </div>
+    </div>
+  </div>
 
+  <div class="section" id="section2">
+    <div class="skills-container">
+      <h1>Skills</h1>
+      <div class="skill">
+        <div class="skill-info">
+          <h2>HTML</h2>
+          <div class="progress-bar">
+            <div class="progress progress-html"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h2>CSS</h2>
+          <div class="progress-bar">
+            <div class="progress progress-css"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h2>JavaScript</h2>
+          <div class="progress-bar">
+            <div class="progress progress-js"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h2>React</h2>
+          <div class="progress-bar">
+            <div class="progress progress-react"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h2>Node.js</h2>
+          <div class="progress-bar">
+            <div class="progress progress-node"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="section3">
+    <div class="container-fluid px-md-5">
+      <div class="row justify-content-center py-5 mt-5">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center d-flex ftco-animate">
+          <a href="https://github.com/web-slate/TwixtUI" target="_blank" class="services-1 shadow">
+            <div class="desc">
+              <h3 class="mb-5">Twixt UI</h3>
+              <p>Developed a suite of UI components for Twixt UI, similar to Bootstrap/Material UI, including Single Line Input, Button, Header, Sidebar, Icons, Textarea, Modal, Dialog, Switch, Checkbox, and Simple Table.
+                <br>Created comprehensive Storybook documentation for each component, providing clear usage guidelines and examples for developers.
+                <br>Published on Npm packages
+                </p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 text-center d-flex ftco-animate">
+          <a href="https://github.com/web-slate/react-chef" target="_blank" class="services-1 shadow">
+            <div class="desc">
+              <h3 class="mb-5">React Chef</h3>
+              <p>React-Chef is a Node Module helps you to create react boiler plate apps instantly, prescribing best practices and tools to help you stay productive and mainly transparent React Boilerplate App.
+              <br>This Module aims to helps developer to create react app instantly.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 text-center d-flex ftco-animate">
+          <a href="https://github.com/web-slate/gitai" target="_blank" class="services-1 shadow">
+            <div class="desc">
+              <h3 class="mb-5">GitAI</h3>
+              <p>Developing an GIT machine learning model to automate the git commands
+                <br>This project provides a command line tool that uses a TensorFlow-based machine learning model to provide information about Git commands and their descriptions.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="styles.js"></script>
 </body>
 </html>

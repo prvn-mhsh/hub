@@ -3,169 +3,390 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 body {
-  background-image: url('Background.gif');
-  background-size: cover; /* This makes sure the image covers the whole background */
-  background-repeat: repeat;
-  background-attachment: fixed; /* This makes the background fixed on scroll */
-  margin: 0;
+  background-image: url('banner-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   font-family: Arial, sans-serif;
 }
 
 /* Basic styling for the navbar */
+.navbar {
+  padding: 10px 20px;
+  color: #fff;
+}
 
 .container {
-  max-width: 1200px; /* Adjust this value according to your design */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Add padding to the sides */
-  display: flex; /* Make the container a flexbox */
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space out items horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-right: auto;
-    text-decoration: none; /* Remove underline */
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: auto;
+  text-decoration: none;
+  color: #fff;
 }
 
 .menu {
-  list-style-type: none; /* Remove bullet points */
-  display: flex; /* Make the menu items horizontal */
-  
+  list-style-type: none;
+  display: flex;
 }
 
 .menu li {
-  margin-right: 20px; /* Spacing between menu items */
+  margin-right: 20px;
 }
 
 .menu li:last-child {
-  margin-right: 0; /* Remove margin from the last menu item */
+  margin-right: 0;
 }
 
 .menu li a {
-  text-decoration: none; /* Remove underline */
-  position: relative;
+  text-decoration: none;
+  color: #fff;
   font-size: 1.7rem;
 }
 
 .menu li a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
+
+/* Centered text styling */
 .center-text {
   margin: auto;
-    position: absolute;
-    top: 30%;
-    bottom: 40%;
-    text-align: center;
-    color: aliceblue;
-    font-style: Arial, sans-serif; /* Correct font-family declaration */
-    font-size: 24px;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
 }
+
 .center-text h1 {
-  font-style: arial sans-serif;
-  margin-bottom: 20px; /* Adjust the value as needed */
+  margin-bottom: 20px;
 }
+
 .center-text h2 {
-  padding: auto; /* Font size */
-  color: blue; /* Text color */
-  overflow: hidden; /* Hide overflow */
-  white-space: nowrap; /* Prevent wrapping */
-animation: eraseAndForm 4s infinite; /* Animation */
+  color: blue;
+  white-space: nowrap;
+  animation: eraseAndForm 4s infinite;
 }
+
 .center-text p {
   margin-bottom: 20px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-   
-}
-.center-text p em{
-  color:blue;
-}
-.txt-rotate > .wrap {
-  border-right: 0.15em solid #333;
 }
 
-@keyframes rotate {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(-360deg); }
+.center-text p em {
+  color: blue;
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.15em solid #333;
 }
 
 .txt-rotate {
   display: inline-block;
 }
+
 /* Assign background images using CSS */
 #button1 {
-background-image: url('https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png');
+  background-image: url('https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png');
 }
 
 #button2 {
-background-image: url('https://cdn.icon-icons.com/icons2/2992/PNG/512/linkedin_logo_icon_187302.png');
+  background-image: url('https://cdn.icon-icons.com/icons2/2992/PNG/512/linkedin_logo_icon_187302.png');
 }
 
 #button3 {
-background-image: url('https://logowik.com/content/uploads/images/gmail-new-icon5198.jpg');
+  background-image: url('https://logowik.com/content/uploads/images/gmail-new-icon5198.jpg');
 }
 
 /* Flex button container */
 .button-container {
-display: flex;
-justify-content: center;
-margin-top: 20px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Flex buttons */
 .flex-button {
-margin: 0 10px; /* Adjust spacing between buttons */
-  padding: 0; /* Remove padding */
-  background-color: transparent; /* Transparent background */
-  border: none; /* Remove border */
-  border-radius: 50%; /* Round shape */
+  margin: 0 10px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  overflow: hidden; /* Hide overflow */
-  width: 75px; /* Adjust button width */
-  height: 75px; /* Adjust button height */
-  background-size: cover; /* Ensure full image fits inside the button */
-  background-position: center; /* Center the background image */
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Optional: add hover effect */
 .flex-button:hover {
-opacity: 0.8; /* Reduce opacity on hover */
+  opacity: 0.8;
 }
+
 /* Rectangular download button */
 .download-button {
-margin-top: 20px;
-display: inline-block;
-padding: 10px 20px; /* Adjust button padding */
-background-color: #007bff; /* Button background color */
-color: #fff; /* Button text color */
-text-decoration: none; /* Remove underline */
-border: none; /* Remove border */
-border-radius: 5px; /* Add border radius */
-transition: background-color 0.3s ease; /* Add transition for hover effect */
+  margin-top: 50px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* Hover animation */
 .download-button:hover {
-background-color: #0056b3; /* Change background color on hover */
-transform: translateY(-2px); /* Move button up on hover */
+  background-color: rgb(123, 255, 0);
+  transform: translateY(-2px);
 }
 
-/* Optional: Add shadow */
 .download-button {
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
-} 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 @keyframes jump {
-0% { transform: translateY(-100px); }
-100% { transform: translateY(0); }
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
 }
+
 .animated-text {
-animation: jump 2s; /* Apply animation with 2 seconds duration and infinite loop */
+  animation: jump 2s;
 }
-.body {
-color: #333; /* Default text color for light theme */
+
+/* Styling for sections */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section:nth-of-type(1) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section:nth-of-type(2) {
+  color: #333;
+}
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+}
+
+.nav-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.skills-container {
+  margin-left: 0;
+  padding: 40px 50px;
+  text-align: left;
+  width: 80%;
+}
+
+.skills-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #f7f7f7;
+}
+
+.skill {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  flex: 1;
+  text-align: left;
+}
+
+.skill-info h2 {
+  color: #06c5ff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 20px 0 0 20px;
+  width: 0;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--width);
+  }
+}
+
+.progress.animate-90 {
+  --width: 90%;
+  animation: progressAnimation 2s forwards;
+}
+
+.progress.animate-85 {
+  --width: 85%;
+  animation: progressAnimation 2s forwards;
+}
+
+.progress.animate-75 {
+  --width: 75%;
+  animation: progressAnimation 2s forwards;
+}
+
+.progress.animate-80 {
+  --width: 80%;
+  animation: progressAnimation 2s forwards;
+}
+
+.progress.animate-70 {
+  --width: 70%;
+  animation: progressAnimation 2s forwards;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+  
+  .menu li a {
+    font-size: 1.2rem;
+  }
+  
+  .center-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .center-text h2 {
+    font-size: 1.2rem;
+  }
+  
+  .flex-button {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* Container padding */
+.container-fluid {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Heading section styling */
+.heading-section {
+  margin-bottom: 2rem;
+}
+.heading-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Services box styling */
+.services-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Services box hover effects */
+.services-1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: greenyellow;
+}
+
+/* Description inside the box */
+.services-1 .desc {
+  text-align: center;
+}
+
+
+.services-1 h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.services-1 p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* General text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Flexbox alignment for the service boxes */
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shadow effect */
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .services-1 {
+    margin-bottom: 2rem;
+  }
 }
