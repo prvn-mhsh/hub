@@ -345,6 +345,7 @@ body {
   
   .services-1 {
     padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 }
 /* Container padding */
@@ -377,11 +378,13 @@ body {
   color: inherit;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-}
+  
+} 
 
 
 /* Services box hover effects */
-.services-1:hover {
+.services-1:hover,
+.services-1.hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   background-color: aqua;
@@ -419,7 +422,8 @@ body {
 }
 
 /* Display hover text on hover */
-.services-1:hover .hover-text {
+.services-1:hover .hover-text,
+.services-1.hover .hover-text {
   display: block;
 }
 /* General text alignment */
