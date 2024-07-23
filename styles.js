@@ -97,3 +97,29 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section2);
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class 'services-1'
+  var servicesElements = document.querySelectorAll('.services-1');
+
+  // Add touchstart event listener to each element
+  servicesElements.forEach(function(element) {
+    element.addEventListener('touchstart', function() {
+      // Remove hover class from all elements
+      servicesElements.forEach(function(el) {
+        el.classList.remove('hover');
+      });
+      // Add hover class to the touched element
+      element.classList.add('hover');
+    });
+  });
+
+  // Optionally, remove the hover class on touchend if needed
+  document.addEventListener('touchend', function(event) {
+    // Close the hover state after some delay (optional)
+    setTimeout(function() {
+      servicesElements.forEach(function(el) {
+        el.classList.remove('hover');
+      });
+    }, 2000); // Adjust delay as needed
+  });
+});
