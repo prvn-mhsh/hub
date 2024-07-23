@@ -16,13 +16,16 @@ body {
 
 /* Basic styling for the navbar */
 .navbar {
-  padding: 10px 20px;
-  color: #fff;
+    border-bottom: 1px solid #ccc; /* Optional: adds a border for separation */
+    position: fixed; /* Keeps the navbar at the top of the viewport */
+    width: 100%; /* Full-width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other content */
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,6 +41,7 @@ body {
 
 .menu {
   list-style-type: none;
+  overflow-x: auto;
   display: flex;
 }
 
@@ -58,7 +62,31 @@ body {
 .menu li a:hover {
   text-decoration: underline;
 }
+/* Make navbar scrollable on smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    position: static; /* Allow it to flow with the content on smaller screens */
+  }
 
+  .collapse {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling for menu */
+    max-height: 400px; /* Adjust based on desired height */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show toggler button on smaller screens */
+  }
+
+  .navbar-collapse {
+    display: none; /* Hide the menu by default */
+  }
+
+  .navbar-collapse.show {
+    display: flex; /* Show the menu when toggled */
+  }
+}
 /* Centered text styling */
 .center-text {
   margin: auto;
@@ -67,7 +95,7 @@ body {
   width: 100%;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .center-text h1 {
@@ -339,6 +367,7 @@ body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 
@@ -346,14 +375,14 @@ body {
 .services-1:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  background-color: greenyellow;
+  background-color: aqua;
 }
 
 /* Description inside the box */
 .services-1 .desc {
   text-align: center;
+  position: relative;
 }
-
 
 .services-1 h3 {
   font-size: 1.8rem;
@@ -367,7 +396,23 @@ body {
   color: #666;
   line-height: 1.6;
 }
+.hover-text {
+  display: none; /* Initially hide the hover text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(61, 56, 56, 0.75);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1; /* Ensure the text appears above other elements */
+}
 
+/* Display hover text on hover */
+.services-1:hover .hover-text {
+  display: block;
+}
 /* General text alignment */
 .text-center {
   text-align: center;
@@ -384,9 +429,36 @@ body {
 .shadow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  .services-1 {
-    margin-bottom: 2rem;
+/* Styles for small devices (mobile phones) */
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+/* Styles for medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Styles for large devices (desktops) */
+@media (min-width: 1025px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 30px;
   }
 }
