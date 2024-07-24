@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { selector: '.progress-css', className: 'animate-85' },
     { selector: '.progress-js', className: 'animate-75' },
     { selector: '.progress-react', className: 'animate-80' },
-    { selector: '.progress-node', className: 'animate-70' }
+    { selector: '.progress-node', className: 'animate-70' },
+    { selector: '.progress-sql', className: 'animate-80' }
   ];
 
   const skillLink = document.querySelector('.menu li a[href="#section2"]');
